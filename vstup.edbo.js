@@ -50,8 +50,6 @@
         const priority = $(row).find('.offer-request-priority > div').text().trim();
         const rate = Number.parseFloat($(row).find('.offer-request-kv > div').text().replace(',', '.'));
 
-        console.log(111, priority, priority.charCodeAt())
-
         if (priorities.includes(priority) && rateMin <= rate && rate <= rateMax) {
           counter = counter + 1;
           $(row).show();
